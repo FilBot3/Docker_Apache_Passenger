@@ -22,7 +22,7 @@ RUN yum install -y httpd mod_passenger
 # Restart httpd if its already running
 #RUN systemctl restart httpd
 #RUN service httpd restart 
-RUN /etc/init.d/httpd restart
+#RUN /etc/init.d/httpd restart
 
 # Check if Passenger is working
 RUN /usr/bin/passenger-config validate-install
