@@ -10,6 +10,7 @@ MAINTAINER Phillip Dudley version 0.1.0
 RUN yum install -y epel-release pygpgme curl
 
 # Install rbenv
+RUN cd ~; pwd
 
 
 # Download the PassengerFusion YUM Repository
@@ -20,7 +21,8 @@ RUN yum install -y httpd mod_passenger
 
 # Restart httpd if its already running
 #RUN systemctl restart httpd
-RUN service httpd restart 
+#RUN service httpd restart 
+RUN /etc/init.d/httpd restart
 
 # Check if Passenger is working
 RUN /usr/bin/passenger-config validate-install
