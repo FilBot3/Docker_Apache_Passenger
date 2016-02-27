@@ -25,6 +25,6 @@ RUN yum install -y httpd mod_passenger
 #RUN /etc/init.d/httpd restart
 
 # Check if Passenger is working
-RUN /usr/bin/passenger-config validate-install
+#RUN /usr/bin/passenger-config validate-install
 
 EXPOSE 80
